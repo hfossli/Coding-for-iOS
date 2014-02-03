@@ -166,7 +166,6 @@ As a rule of thumb: Use copy whenever there's a immutable/mutable-pair (e.g. NSA
     book.title = bookTitle;
     [bookTitle setString:@"Worst book ever"];
     NSLog(@"book title %@", book.title);
- 
 }
 ```
 Source: http://ios-blog.co.uk/tutorials/quick-tips/use-copy-for-nsstring-properties/
@@ -259,7 +258,7 @@ Answer: Well, again, don't you want your class to be safe from malicious code li
         [citizens addObject:@"Truls"];
         [citizens addObject:@"Jonas"];
     });
-	return citizens;
+    return citizens;
 }
 
 ```
