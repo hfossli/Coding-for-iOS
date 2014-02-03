@@ -33,7 +33,7 @@ A walkthrough of best practices. This is a collection of the what you find on in
 
 @end
 ```
-**When?**  You want to create an immutable object.
+**When?** When you want to create an immutable object.
 
 **Why?** It is considered a good practice to use the getters and setters instead of ivars themselves. And you need to write to the property. 
 
