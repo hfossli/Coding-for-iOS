@@ -283,3 +283,8 @@ Answer: Well, again, don't you want your class to be safe from malicious code li
 http://ios-blog.co.uk/tutorials/quick-tips/use-copy-for-nsstring-properties/
 
 http://ashfurrow.com/blog/structuring-modern-objective-c
+
+
+
+[![Agens | Digital craftsmanship](http://static.agens.no/images/agens_logo_w_slogan_avenir_small.png)](http://agens.no/)
+
