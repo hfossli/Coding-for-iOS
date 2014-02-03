@@ -5,110 +5,6 @@ A walkthrough of best practices. This is a collection of the what you find on in
 
 
 
-## Constants
-
-
-
-### Public constants
-
-.h
-
-```
-extern const CGFloat ASHHeaderViewHeight;
-```
-.m
-```
-const CGFloat ASHHeaderViewHeight = 44.0;
-```
-
-
-
-### Private constants
-
-In top of your implementation-file:
-
-```
-const CGFloat ASHHeaderViewHeight = 44.0;
-```
-
-
-## Naming
-
-### Classes
-Use 3 letter-prefixes. 
-
-**Why?** The probability of someone else using a two-letter prefix is very high. In fact we've already experienced it with *AG*. Cocoapods is steadily growing.
-
-### Categories
-
-Prefix everything - including the setters. 
-```
-@interface UIScrollView (AGSAnimation)
-
-@property (nonatomic, strong, readwrite, setter=ags_setOffsetAnimation:) AGSAnimation *ags_offsetAnimation;
-
-- (void)ags_setContentOffset:(CGPoint)targetOffset
-              timingFunction:(double(^)(double p))timingFunction
-                    duration:(NSTimeInterval)duration
-                  onComplete:(void(^)(BOOL cancelled))onComplete;
-               
-@end
-```
-
-#### Category-name
-
-The prefix can concist of your project/company OR the purpose of the category.  
-
-E.g. `AGS` from `Agens`  
-E.g. `COS` from `ContentOffsetAnimation` 
-
-The latter one is relevant when writing small categories. 
-
-```
-@interface UIScrollView (AGSAnimation)
-
-@property (nonatomic, strong, readwrite, setter=ags_setOffsetAnimation:) AGSAnimation *ags_offsetAnimation;
-
-- (void)ags_setContentOffset:(CGPoint)targetOffset
-              timingFunction:(double(^)(double p))timingFunction
-                    duration:(NSTimeInterval)duration
-                  onComplete:(void(^)(BOOL cancelled))onComplete;
-               
-@end
-```
-
-### Properties
-
-I suggest grouping using bottom-up hirearchy because of the natural grouping.
-
-```
-@property (nonatomic, strong) labelTitle;
-@property (nonatomic, strong) labelDescription;
-@property (nonatomic, strong) viewFail;
-@property (nonatomic, strong) viewLoading;
-```
-
-
-## Categories
-
-Prefix everything - including the setters. 
-```
-@interface UIScrollView (AGSAnimation)
-
-@property (nonatomic, strong, readwrite, setter=ags_setOffsetAnimation:) AGSAnimation *ags_offsetAnimation;
-
-- (void)ags_setContentOffset:(CGPoint)targetOffset
-              timingFunction:(double(^)(double p))timingFunction
-                    duration:(NSTimeInterval)duration
-                  onComplete:(void(^)(BOOL cancelled))onComplete;
-               
-@end
-```
-
-
-
-
-
 
 
 
@@ -262,6 +158,114 @@ Answer: Well, again, don't you want your class to be safe from malicious code li
 }
 
 ```
+
+
+
+
+
+
+
+
+## Constants
+
+
+
+### Public constants
+
+.h
+
+```
+extern const CGFloat ASHHeaderViewHeight;
+```
+.m
+```
+const CGFloat ASHHeaderViewHeight = 44.0;
+```
+
+
+
+### Private constants
+
+In top of your implementation-file:
+
+```
+const CGFloat ASHHeaderViewHeight = 44.0;
+```
+
+
+## Naming
+
+### Classes
+Use 3 letter-prefixes. 
+
+**Why?** The probability of someone else using a two-letter prefix is very high. In fact we've already experienced it with *AG*. Cocoapods is steadily growing.
+
+### Categories
+
+Prefix everything - including the setters. 
+```
+@interface UIScrollView (AGSAnimation)
+
+@property (nonatomic, strong, readwrite, setter=ags_setOffsetAnimation:) AGSAnimation *ags_offsetAnimation;
+
+- (void)ags_setContentOffset:(CGPoint)targetOffset
+              timingFunction:(double(^)(double p))timingFunction
+                    duration:(NSTimeInterval)duration
+                  onComplete:(void(^)(BOOL cancelled))onComplete;
+               
+@end
+```
+
+#### Category-name
+
+The prefix can concist of your project/company OR the purpose of the category.  
+
+E.g. `AGS` from `Agens`  
+E.g. `COS` from `ContentOffsetAnimation` 
+
+The latter one is relevant when writing small categories. 
+
+```
+@interface UIScrollView (AGSAnimation)
+
+@property (nonatomic, strong, readwrite, setter=ags_setOffsetAnimation:) AGSAnimation *ags_offsetAnimation;
+
+- (void)ags_setContentOffset:(CGPoint)targetOffset
+              timingFunction:(double(^)(double p))timingFunction
+                    duration:(NSTimeInterval)duration
+                  onComplete:(void(^)(BOOL cancelled))onComplete;
+               
+@end
+```
+
+### Properties
+
+I suggest grouping using bottom-up hirearchy because of the natural grouping.
+
+```
+@property (nonatomic, strong) labelTitle;
+@property (nonatomic, strong) labelDescription;
+@property (nonatomic, strong) viewFail;
+@property (nonatomic, strong) viewLoading;
+```
+
+
+## Categories
+
+Prefix everything - including the setters. 
+```
+@interface UIScrollView (AGSAnimation)
+
+@property (nonatomic, strong, readwrite, setter=ags_setOffsetAnimation:) AGSAnimation *ags_offsetAnimation;
+
+- (void)ags_setContentOffset:(CGPoint)targetOffset
+              timingFunction:(double(^)(double p))timingFunction
+                    duration:(NSTimeInterval)duration
+                  onComplete:(void(^)(BOOL cancelled))onComplete;
+               
+@end
+```
+
 
 
 
