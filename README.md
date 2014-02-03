@@ -161,15 +161,10 @@ As a rule of thumb: Use copy whenever there's a immutable/mutable-pair (e.g. NSA
 
 - (void)stringExample 
 {
- 
     NSMutableString *bookTitle = [NSMutableString stringWithString:@"Best book ever"];
- 
     Book *book = [[Book alloc] init];
- 
     book.title = bookTitle;
- 
     [bookTitle setString:@"Worst book ever"];
- 
     NSLog(@"book title %@", book.title);
  
 }
